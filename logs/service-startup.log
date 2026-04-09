@@ -1,0 +1,15 @@
+
+[2026-04-09T15:20:18.351Z] mode=dev host=0.0.0.0 port=26007
+[stdout] 
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m437[22m[2m[0m ms[22m
+
+[stdout]   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m26007[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://198.18.0.1:[1m26007[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.215.120:[1m26007[22m/[39m
+[service] exit code=1 signal=null
+
+[2026-04-09T15:23:26.714Z] mode=prod host=0.0.0.0 port=26007
+[stdout]   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m26007[22m/[39m
+[stdout]   [32m➜[39m  [1mNetwork[22m: [36mhttp://198.18.0.1:[1m26007[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.215.120:[1m26007[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m

@@ -4,9 +4,12 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "ensure:port": "node scripts/ensure-port.mjs",
+    "dev": "node scripts/start-service.mjs dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "node scripts/start-service.mjs prod",
+    "start": "npm run build && node scripts/start-service.mjs prod",
+    "test:port": "node --test scripts/test-fixed-port.mjs"
   },
   "devDependencies": {
     "vite": "^5.4.11"
