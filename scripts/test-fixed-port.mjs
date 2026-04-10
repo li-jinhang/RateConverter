@@ -29,27 +29,13 @@ test("service should listen on fixed port 26007 only", { timeout: 45000 }, async
     stdio: ["ignore", "pipe", "pipe"]
   });
 
-  let servicePid = null;
-  let outputBuffer = "";
-
-  runner.stdout.on("data", (chunk) => {
-    const text = chunk.toString();
-    outputBuffer += text;
-    const match = outputBuffer.match(/SERVICE_CHILD_PID=(\d+)/);
-    if (match) {
-      servicePid = Number(match[1]);
-    }
-  });
+  const servicePid = runner.pid;
 
   const cleanup = async () => {
-    if (servicePid) {
-      await killPid(servicePid, true).catch(() => {});
-    }
     await killPid(runner.pid, true).catch(() => {});
   };
 
   try {
-    await waitFor(() => Number.isFinite(servicePid), 20000);
     await waitFor(async () => {
       const ports = await getListeningPortsByPid(servicePid);
       return ports.includes(FIXED_PORT);

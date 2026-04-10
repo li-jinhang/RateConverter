@@ -35,3 +35,23 @@
 [stdout]   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m26007[22m/[39m
 [stdout]   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.215.120:[1m26007[22m/[39m
 [2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+[2026-04-10T01:04:55.888Z] mode=prod host=0.0.0.0 port=26007
+[stdout] [service] 生产静态服务已启动: http://0.0.0.0:26007
+[stdout] [service] 根目录: D:\_Projects\RateConverter\dist
+
+[2026-04-10T01:07:09.660Z] mode=dev host=0.0.0.0 port=26007
+[stdout] [service] 开发静态服务已启动: http://0.0.0.0:26007
+[stdout] [service] 根目录: D:\_Projects\RateConverter
+
+[2026-04-10T01:08:06.291Z] mode=dev host=0.0.0.0 port=26007
+[stdout] [service] 开发静态服务已启动: http://0.0.0.0:26007
+[stdout] [service] 根目录: D:\_Projects\RateConverter
+
+[2026-04-10T01:33:33.941Z] mode=prod host=0.0.0.0 port=26007
+[stdout] [service] 生产静态服务已启动: http://0.0.0.0:26007
+[stdout] [service] 根目录: D:\_Projects\RateConverter\dist
+
+[2026-04-10T01:43:19.753Z] mode=prod host=0.0.0.0 port=26007
+[stdout] [service] 生产静态服务已启动: http://0.0.0.0:26007
+[stdout] [service] 根目录: D:\_Projects\RateConverter\dist
