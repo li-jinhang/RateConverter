@@ -105,8 +105,6 @@ async function refreshRates(baseCurrency, silent = false) {
     state.base = baseCurrency;
     state.rates = rates;
     state.lastUpdate = updatedAt;
-
-    convert();
   } catch (error) {
     setStatus(`获取汇率失败：${error.message}`, "error");
   }
@@ -124,19 +122,12 @@ function bindEvents() {
     event.preventDefault();
     if (fromCurrencySelect.value !== state.base) {
       await refreshRates(fromCurrencySelect.value, true);
-      return;
     }
     convert();
   });
 
-  amountInput.addEventListener("input", () => convert());
-
   fromCurrencySelect.addEventListener("change", async () => {
     await refreshRates(fromCurrencySelect.value, true);
-  });
-
-  toCurrencySelect.addEventListener("change", () => {
-    convert();
   });
 
   swapButton.addEventListener("click", async () => {
